@@ -1,6 +1,5 @@
 ---
 title: English
 img: English.jpg
-location:
-    granada: asasdasd
+description: Learn English with interactive lessons and practical exercises.
 ---
