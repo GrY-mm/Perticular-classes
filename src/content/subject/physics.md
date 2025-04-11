@@ -1,6 +1,5 @@
 ---
-title: physics
+title: Physics
 img: physics.jpg
-location:
-    granada: asasdasd
+description: Explore the fascinating world of physics with practical experiments.
 ---
