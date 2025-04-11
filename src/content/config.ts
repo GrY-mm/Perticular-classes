@@ -5,9 +5,9 @@ const subject = defineCollection({
         title: z.string(),
         description: z.string(),
         icon: z.string(),
-        location: z.object{(
+        location: z.object({
             granada: z.string(),
-        )}
+        })
     }),
 })
 
