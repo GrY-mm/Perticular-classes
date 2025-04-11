@@ -1,6 +1,5 @@
 ---
-title: language
+title: Language
 img: language.jpg
-location:
-    granada: asasdasd
+description: Improve your language skills with engaging and interactive lessons.
 ---
