@@ -1,24 +1,19 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 import { getCollection } from 'astro:content';
+import Header from '../components/header.astro';
+import Layout from '../layouts/Layout.astro';
+import Button from "../components/button.astro";
 
 const subject = await getCollection('subject').catch(() => []);
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-    <p class="text-5xl font-extrabold text-center mt-8">
-        <span class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
-            Particular
-        </span><br />
-        <span class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
-        </span> 
-		<span>📖</span>
-        <span> Class </span>
-        <span>✏️</span>
-    </p>
+<Layout title="Particular Class">
+    <Header />
+<nav 
+    class="flex flex-row items-center justify-center gap-20 w-full text-center">
+    <Button title="Clases" site="/clases"></Button>
+    <Button title="Cursos" site="/cursos"></Button>
+    <Button title="Información" site="/info"></Button>
+</nav>
 </Layout>
