@@ -1,6 +1,5 @@
 ---
 title: Mates
 img: math.jpg
-location:
-    granada: asasdasd
+description: Master mathematics with step-by-step explanations and examples.
 ---
