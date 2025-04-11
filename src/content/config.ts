@@ -4,9 +4,7 @@ const subject = defineCollection({
     schema: z.object({
         title: z.string(),
         img: z.string(),
-        location: z.object({
-            granada: z.string(),
-        })
+        description: z.string(),
     }),
 })
 
