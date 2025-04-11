@@ -4,15 +4,21 @@ import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 import { getCollection } from 'astro:content';
 
-const subject = await getCollection('subject');
+const subject = await getCollection('subject').catch(() => []);
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<h1 class="text-center text-4xl font-extrabold mt-16">
-		<span>Particular</span><br />
-        <span>📖 Classes ✏️</span>
-	</h1>
+    <p class="text-5xl font-extrabold text-center mt-8">
+        <span class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
+            Particular
+        </span><br />
+        <span class="bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
+        </span> 
+		<span>📖</span>
+        <span> Class </span>
+        <span>✏️</span>
+    </p>
 </Layout>
