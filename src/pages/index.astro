@@ -10,13 +10,20 @@ const subject = await getCollection('subject').catch(() => []);
 
 <Layout title="Particular Class">
     <Header />
-<div class="fixed inset-0 -z-20 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
-<div class="fixed inset-0 -z-20 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] opacity-15"></div>
+    <div class="fixed inset-0 -z-20 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+    <div class="fixed inset-0 -z-20 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] opacity-15"></div>
     <nav
-        class="flex flex-row items-center justify-center gap-20 w-full text-center mt-8">
+        class="flex flex-warp items-center justify-center gap-10 w-full text-center mt-8">
         <Button title="Clases" site="/clases"></Button>
-        <Button title="Cursos" site="/cursos"></Button>
-        <Button title="Información" site="/info"></Button>
         <Button title="Apuntes" site="/apuntes"></Button>
+        <Button title="Información" site="/info"></Button>
     </nav>
+
+    <div class="fixed bottom-4 right-4">
+        <a href="https://www.instagram.com/knifedarkk/" target="_blank">
+            <button class="px-4 py-2 text-indigo-100 bg-purple-600 hover:bg-purple-700 rounded-lg shadow-md transition-all transform hover:scale-110 outline-2 outline-offset-4 [outline-image:linear-gradient(to right, #9333ea, #7c3aed)] text-sm">
+                📷 Instagram
+            </button>
+        </a>
+    </div>
 </Layout>
