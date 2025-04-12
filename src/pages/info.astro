@@ -7,27 +7,47 @@ import Header from "../components/header.astro";
 <Layout title="INFO">
     <Header />
     <div class="fixed inset-0 -z-20 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
-<div class="fixed inset-0 -z-20 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] opacity-15"></div>
+    <div class="fixed inset-0 -z-20 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] opacity-15"></div>
     <div class="p-8">
-        <h1 class="text-4xl font-bold text-center mb-6">Información Importante</h1>
-        <p class="text-lg text-gray-700 mb-4">
+        <div class="group p-10">
+            <h1 class="text-4xl font-bold text-center mb-6 group-hover:rotate-2 transition-transform duration-500 ease-in-out">
+                Información Importante
+            </h1>
+        </div>
+        <p class="text-lg text-gray-700 mb-4 hover:text-purple-600 transition-colors duration-500 ease-in-out">
             Bienvenido a <strong>Particular Classes</strong>, una plataforma diseñada para ayudarte a aprender y mejorar tus habilidades en diversas materias. Aquí encontrarás recursos educativos, clases personalizadas y materiales de apoyo para facilitar tu aprendizaje.
         </p>
-        <h2 class="text-2xl font-semibold mt-6 mb-4">¿Cómo funciona?</h2>
-        <p class="text-lg text-gray-700 mb-4">
+        <div class="group p-10">
+            <h2 class="text-2xl font-semibold mt-6 mb-4 group-hover:rotate-2 transition-transform duration-500 ease-in-out">
+                ¿Cómo funciona?
+            </h2>
+        </div>
+        <p class="text-lg text-gray-700 mb-4 hover:text-purple-600 transition-colors duration-500 ease-in-out">
             Nuestra plataforma está organizada en diferentes secciones para que puedas acceder fácilmente a lo que necesitas:
         </p>
         <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
-            <li><strong>Clases:</strong> Explora nuestras clases personalizadas en diversas materias, diseñadas para adaptarse a tus necesidades.</li>
-            <li><strong>Cursos:</strong> Accede a cursos completos con materiales y ejercicios prácticos.</li>
-            <li><strong>Información:</strong> Encuentra detalles sobre cómo aprovechar al máximo nuestra plataforma.</li>
-            <li><strong>Apuntes:</strong> Descarga apuntes y recursos adicionales para complementar tu aprendizaje.</li>
+            <li class="hover:translate-x-2 transition-transform duration-500 ease-in-out">
+                <strong>Clases:</strong> Explora nuestras clases personalizadas en diversas materias, diseñadas para adaptarse a tus necesidades.
+            </li>
+            <li class="hover:translate-x-2 transition-transform duration-500 ease-in-out">
+                <strong>Cursos:</strong> Accede a cursos completos con materiales y ejercicios prácticos.
+            </li>
+            <li class="hover:translate-x-2 transition-transform duration-500 ease-in-out">
+                <strong>Información:</strong> Encuentra detalles sobre cómo aprovechar al máximo nuestra plataforma.
+            </li>
+            <li class="hover:translate-x-2 transition-transform duration-500 ease-in-out">
+                <strong>Apuntes:</strong> Descarga apuntes y recursos adicionales para complementar tu aprendizaje.
+            </li>
         </ul>
-        <h2 class="text-2xl font-semibold mt-6 mb-4">¿De qué trata?</h2>
-        <p class="text-lg text-gray-700 mb-4">
+        <div class="group p-10">
+            <h2 class="text-2xl font-semibold mt-6 mb-4 group-hover:rotate-2 transition-transform duration-500 ease-in-out">
+                ¿De qué trata?
+            </h2>
+        </div>
+        <p class="text-lg text-gray-700 mb-4 hover:text-purple-600 transition-colors duration-500 ease-in-out">
             <strong>Particoolar Classes</strong> está enfocada en ofrecer una experiencia de aprendizaje personalizada. Nuestro objetivo es ayudarte a alcanzar tus metas educativas mediante clases interactivas, materiales de alta calidad y un enfoque práctico.
         </p>
-        <p class="text-lg text-gray-700">
+        <p class="text-lg text-gray-700 hover:text-purple-600 transition-colors duration-500 ease-in-out">
             Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos. ¡Estamos aquí para apoyarte en tu camino de aprendizaje!
         </p>
     </div>
