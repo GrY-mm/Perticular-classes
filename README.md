@@ -12,9 +12,9 @@ Una plataforma educativa moderna donde puedes **aprender** y **enseñar** de man
 Particoolar Classes es una web pensada para conectar a personas que quieren **aprender** con quienes desean **enseñar**. Aquí encontrarás:
 
 - Clases de distintas materias (mates, lengua, física, química, filosofía, inglés y más)
-- Apuntes y recursos descargables
+- Apuntes y recursos descargables (¡próximamente!)
 - Cursos completos (¡próximamente!)
-- Un espacio para compartir y buscar profesores particulares
+- Un espacio para buscar profesores particulares o ser uno de ellos
 - Interfaz moderna, animada y fácil de usar
 
 ---
