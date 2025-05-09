@@ -1,48 +1,111 @@
-# Astro Starter Kit: Basics
+# 📚 Particoolar Classes
 
-```sh
-pnpm create astro@latest -- --template basics
+¡Bienvenido a **Particoolar Classes**!  
+Una plataforma educativa moderna donde puedes **aprender** y **enseñar** de manera sencilla, visual y colaborativa.
+
+---
+
+![Astro](./src/assets/astro.svg)
+
+## 🚀 ¿Qué es Particoolar Classes?
+
+Particoolar Classes es una web pensada para conectar a personas que quieren **aprender** con quienes desean **enseñar**. Aquí encontrarás:
+
+- Clases de distintas materias (mates, lengua, física, química, filosofía, inglés y más)
+- Apuntes y recursos descargables
+- Cursos completos (¡próximamente!)
+- Un espacio para compartir y buscar profesores particulares
+- Interfaz moderna, animada y fácil de usar
+
+---
+
+## ✨ Características principales
+
+- **Diseño atractivo** con TailwindCSS y Astro
+- Navegación rápida entre clases, apuntes, cursos e información
+- Botón de acceso directo a Instagram para contacto o comunidad
+- Animaciones suaves y componentes reutilizables
+- Estructura lista para crecer: añade más materias, profesores o recursos fácilmente
+
+---
+
+## 🗂️ Estructura del proyecto
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
-│   └── favicon.svg
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/         # Imágenes y SVGs
+│   ├── components/     # Componentes reutilizables (header, button, etc.)
+│   ├── content/        # Materias y descripciones en Markdown
+│   ├── layouts/        # Layout base
+│   ├── pages/          # Páginas principales (clases, apuntes, cursos, info)
+│   └── styles/         # Estilos globales (Tailwind)
+├── public/             # Archivos estáticos
+├── package.json
+└── astro.config.mjs
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## 🧑‍🏫 ¿Cómo funciona?
 
-All commands are run from the root of the project, from a terminal:
+- **Clases:** Explora las materias disponibles y accede a recursos y explicaciones.
+- **Enseñar o aprender:** Elige tu rol y comparte tu perfil como profe o busca a alguien que te ayude.
+- **Apuntes:** Descarga materiales de apoyo (¡muy pronto!).
+- **Cursos:** Accede a cursos completos (en desarrollo).
+- **Información:** Descubre cómo aprovechar la plataforma al máximo.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## 🛠️ Instalación y uso
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/tuusuario/particular-classes.git
+   cd particular-classes
+   ```
+2. Instala dependencias:
+   ```sh
+   pnpm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```sh
+   pnpm dev
+   ```
+4. Abre [http://localhost:4321](http://localhost:4321) en tu navegador.
+
+---
+
+## 📸 Síguenos en Instagram
+
+<div align="left">
+  <a href="https://www.instagram.com/knifedarkk/" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram"/>
+  </a>
+</div>
+
+---
+
+## 💡 Contribuye
+
+¿Tienes ideas, quieres añadir una materia o mejorar la plataforma?  
+¡Las contribuciones son bienvenidas! Haz un fork, crea tu rama y abre un pull request.
+
+---
+
+## 🪐 Tecnologías usadas
+
+- [Astro](https://astro.build/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [Markdown](https://www.markdownguide.org/)
+
+---
+
+## 📄 Licencia
+
+MIT
+
+---
+
+> Hecho con 💜 por [@knifedarkk](https://www.instagram.com/knifedarkk/) y la comunidad.
