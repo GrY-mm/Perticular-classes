@@ -10,19 +10,24 @@ const subjects = await getCollection('subject');
 <Layout title="CLASES">
     <div class="fixed inset-0 -z-20 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
     <div class="fixed inset-0 -z-20 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] opacity-15"></div>
+    
+    <a href="/" class="fixed top-6 left-6 z-[9999] bg-purple-100 border-2 border-purple-400 text-purple-700 font-bold px-4 py-2 rounded-xl shadow hover:bg-purple-200 transition-all flex items-center gap-2">
+        <span class="text-lg">←</span> Volver
+    </a>
+
     <Header />
     <div class="before:absolute before:inset-0 before:bg-gradient-to-b before:from-white/70 before:to-transparent before:pointer-events-none">
     </div>
     <h1 class="text-center text-4xl font-bold my-8">CLASES</h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4">
         {subjects.map((subject) => (
-            <div class="rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+            <a href={`/clasesd/${subject.data.title.toLowerCase()}`} class="rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 block">
                 <img src={subject.data.img} alt={subject.data.title} class="w-full h-48 object-cover" />
                 <div class="p-4">
                     <h2 class="text-xl font-semibold">{subject.data.title}</h2>
                     <p class="text-gray-600">{subject.data.description}</p>
                 </div>
-            </div>
+            </a>
         ))}
     </div>
 </Layout>
