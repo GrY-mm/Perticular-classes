@@ -1,13 +1,17 @@
 ---
-// filepath: c:\Users\diego\particular-classes\src\components\header.astro
 console.log("javascript");
 ---
 
-<div class="sticky top-3 z-50 w-full mb-15">
-    <header class="flex flex-col gap-0.5 px-4 py-2 mx-auto max-w-xl lg:px-6 text-center rounded-xl backdrop-blur-sm bg-gradient-to-r from-purple-400/10 to-purple-600/10">
-        <h2 class="text-5xl font-extrabold bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
-            PARTICOOLAR
-        </h2>
+<div class="sticky top-3 z-50 w-full mb-15 relative">
+    <header class="flex flex-col gap-0.5 px-4 py-2 mx-auto max-w-xl lg:px-6 text-center rounded-xl backdrop-blur-sm bg-gradient-to-r from-purple-400/10 to-purple-600/10 relative">
+        <div class="flex justify-center items-center mb-2">
+            <h2 class="text-5xl font-extrabold bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent relative inline-block">
+                PARTICOOLAR
+                <span class="absolute -right-32 top-21 -translate-y-1/2 -rotate-20 bg-pink-500 text-white text-xs font-bold px-4 py-1 rounded shadow-lg select-none pointer-events-none z-50">
+                    BETA
+                </span>
+            </h2>
+        </div>
         <p class="text-2xl font-extrabold text-gray-500 dark:text-gray-400">
             clases y apuntes
         </p>
