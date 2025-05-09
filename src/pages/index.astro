@@ -3,7 +3,6 @@ import "../styles/global.css";
 import { getCollection } from 'astro:content';
 import Header from '../components/header.astro';
 import Layout from '../layouts/Layout.astro';
-import Button from "../components/button.astro";
 
 const subject = await getCollection('subject').catch(() => []);
 ---
@@ -12,11 +11,20 @@ const subject = await getCollection('subject').catch(() => []);
     <Header />
     <div class="fixed inset-0 -z-20 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
     <div class="fixed inset-0 -z-20 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] opacity-15"></div>
-    <nav
-        class="flex flex-warp items-center justify-center gap-10 w-full text-center mt-8">
-        <Button title="Clases" site="/clases"></Button>
-        <Button title="Apuntes" site="/apuntes"></Button>
-        <Button title="Información" site="/info"></Button>
+    
+    <nav class="flex flex-wrap items-center justify-center gap-8 w-full text-center mt-8">
+        <a href="/clases" class="bg-purple-100 border-2 border-purple-400 rounded-xl px-8 py-4 shadow-lg font-bold text-purple-700 text-xl hover:bg-purple-200 transition-all">
+            Clases
+        </a>
+        <a href="/apuntes" class="bg-purple-100 border-2 border-purple-400 rounded-xl px-8 py-4 shadow-lg font-bold text-purple-700 text-xl hover:bg-purple-200 transition-all">
+            Apuntes
+        </a>
+        <a href="/cursos" class="bg-purple-100 border-2 border-purple-400 rounded-xl px-8 py-4 shadow-lg font-bold text-purple-700 text-xl hover:bg-purple-200 transition-all">
+            Cursos
+        </a>
+        <a href="/info" class="bg-purple-100 border-2 border-purple-400 rounded-xl px-8 py-4 shadow-lg font-bold text-purple-700 text-xl hover:bg-purple-200 transition-all">
+            Información
+        </a>
     </nav>
 
     <div class="fixed bottom-4 right-4">
