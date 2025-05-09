@@ -27,6 +27,44 @@ const subject = await getCollection('subject').catch(() => []);
         </a>
     </nav>
 
+    <div class="max-w-3xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+        <div>
+            <span class="text-4xl">🧑‍🏫</span>
+            <h3 class="font-bold mt-2">Enseña</h3>
+            <p class="text-gray-600 text-sm">Crea tu perfil y ofrece tus clases.</p>
+        </div>
+        <div>
+            <span class="text-4xl">📚</span>
+            <h3 class="font-bold mt-2">Aprende</h3>
+            <p class="text-gray-600 text-sm">Encuentra profesores y recursos.</p>
+        </div>
+        <div>
+            <span class="text-4xl">🤝</span>
+            <h3 class="font-bold mt-2">Conecta</h3>
+            <p class="text-gray-600 text-sm">Contacta y aprende a tu ritmo.</p>
+        </div>
+    </div>
+
+    <div class="max-w-2xl mx-auto mt-12">
+        <h2 class="text-xl font-bold mb-4 text-purple-700">Preguntas frecuentes</h2>
+        <details class="mb-2">
+            <summary class="cursor-pointer font-semibold">¿Cómo me registro como profesor?</summary>
+            <p class="ml-4 text-gray-600">Haz clic en “Clases”, selecciona “Enseñar” y completa tu perfil.</p>
+        </details>
+        <details class="mb-2">
+            <summary class="cursor-pointer font-semibold">¿Las clases pueden ser gratis?</summary>
+            <p class="ml-4 text-gray-600">Sí, puedes ofrecer clases gratuitas o poner el precio que prefieras.</p>
+        </details>
+    </div>
+
+    <div class="bg-purple-100/35 rounded-xl p-6 shadow-lg mt-12 sm:mt-10">
+        <h2 class="text-lg font-bold text-purple-700 mb-4">Novedades</h2>
+        <ul class="list-disc list-inside text-gray-700">
+            <li>Nueva sección de cursos en desarrollo</li>
+            <li>Nueva sección de apuntes en desarrollo</li>
+        </ul>
+    </div>
+
     <div class="fixed bottom-4 right-4">
         <a href="https://www.instagram.com/knifedarkk/" target="_blank">
             <button class="px-4 py-2 text-indigo-100 bg-purple-600 hover:bg-purple-700 rounded-lg shadow-md transition-all transform hover:scale-110 outline-2 outline-offset-4 [outline-image:linear-gradient(to right, #9333ea, #7c3aed)] text-sm">
