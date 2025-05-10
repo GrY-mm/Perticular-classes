@@ -1,0 +1,69 @@
+---
+import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/header.astro";
+import { useState } from "react";
+---
+
+<Layout title="Inglés">
+  <Header />
+  <div class="fixed inset-0 -z-20 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+  <div class="fixed inset-0 -z-20 h-full w-full bg-white [background:radial-gradient(120%_120%_at_50%_10%,#fff_60%,#a78bfa_100%)] opacity-20"></div>
+  
+  <div class="flex gap-8 mt-4">
+    <!-- Barra lateral izquierda -->
+    <aside class="w-full max-w-xs bg-white/80 rounded-2xl shadow-xl border border-purple-200 p-6 h-fit sticky top-2 self-start">
+      <form>
+        <label class="block mb-2 text-purple-700 font-bold" for="search">Buscar profesor</label>
+        <input
+          id="search"
+          name="search"
+          type="text"
+          placeholder="Buscar..."
+          class="w-full px-4 py-2 mb-6 border border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+        />
+
+        <label class="block mb-2 text-purple-700 font-bold" for="price">Precio máximo</label>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xs text-gray-500">Gratis</span>
+          <input
+            id="price"
+            name="price"
+            type="range"
+            min="0"
+            max="10"
+            step="1"
+            class="flex-1 accent-purple-600"
+            oninput="this.nextElementSibling.value = this.value"
+          />
+          <output class="w-10 text-right text-purple-700 font-bold">50</output>
+          <span class="text-xs text-gray-500">10€</span>
+        </div>
+      </form>
+    </aside>
+
+    <!-- Contenido principal -->
+    <section class="flex-1 max-w-2xl mx-auto mt-16 p-8 bg-white/80 rounded-2xl shadow-xl border border-purple-200">
+      <h1 class="text-4xl font-extrabold text-center text-purple-700 mb-4">Inglés</h1>
+      <p class="text-lg text-gray-700 text-center mb-8">
+        Aprende inglés de forma práctica y divertida. Aquí encontrarás recursos, ejercicios y clases para mejorar tu vocabulario, gramática y pronunciación.
+      </p>
+      <div class="flex flex-col md:flex-row gap-8 items-center justify-center">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Inglés" class="rounded-xl shadow-lg w-full max-w-xs object-cover" />
+        <div>
+          <h2 class="text-2xl font-bold text-purple-600 mb-2">¿Qué puedes aprender?</h2>
+          <ul class="list-disc list-inside text-gray-700 mb-4">
+            <li>Vocabulario</li>
+            <li>Gramática</li>
+            <li>Comprensión oral y escrita</li>
+            <li>Expresión oral</li>
+            <li>Preparación de exámenes</li>
+          </ul>
+          <a href="/clases" class="inline-block mt-4 bg-purple-600 text-white px-6 py-2 rounded-lg shadow hover:bg-purple-700 transition-all font-semibold">
+            Volver a clases
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
