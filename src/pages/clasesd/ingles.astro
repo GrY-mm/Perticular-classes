@@ -2,8 +2,17 @@
 import "../../styles/global.css";
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/header.astro";
-import { useState } from "react";
 ---
+
+<script>
+  let price = 0;
+  function updateBar(e) {
+    price = Number(e.target.value);
+    const percent = ((price - 0) / 10) * 100;
+    document.getElementById('bar').style.width = percent + '%';
+    document.getElementById('priceValue').textContent = price;
+  }
+</script>
 
 <Layout title="Inglés">
   <Header />
@@ -24,20 +33,26 @@ import { useState } from "react";
         />
 
         <label class="block mb-2 text-purple-700 font-bold" for="price">Precio máximo</label>
-        <div class="flex items-center gap-2 mb-2">
-          <span class="text-xs text-gray-500">Gratis</span>
-          <input
-            id="price"
-            name="price"
-            type="range"
-            min="0"
-            max="10"
-            step="1"
-            class="flex-1 accent-purple-600"
-            oninput="this.nextElementSibling.value = this.value"
-          />
-          <output class="w-10 text-right text-purple-700 font-bold">50</output>
-          <span class="text-xs text-gray-500">10€</span>
+        <div class="flex flex-col gap-2 mb-2">
+          <div class="mainBar w-full flex items-center gap-2">
+            <h1 id="priceValue" class="text-xs text-gray-500">0</h1>
+            <div id="progressBar" class="flex-1 h-3 bg-gray-200 rounded-full overflow-hidden relative">
+              <div id="bar" class="h-full bg-purple-400 transition-all absolute left-0 top-0" style="width: 0%"></div>
+              <input
+                id="price"
+                name="price"
+                type="range"
+                min="0"
+                max="10"
+                step="1"
+                class="w-full accent-purple-600 opacity-0 absolute left-0 top-0 h-3 cursor-pointer"
+                value="0"
+                oninput="const percent = ((this.value-0)/10)*100; document.getElementById('bar').style.width = percent + '%'; document.getElementById('priceValue').textContent = this.value;"
+                style="z-index:2"
+              />
+            </div>
+            <h1 class="text-xs text-gray-500">10</h1>
+          </div>
         </div>
       </form>
     </aside>
