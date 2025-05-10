@@ -1,1 +1,107 @@
 @import "tailwindcss";
+
+/* Estilos personalizados para el input range circular y color en los extremos */
+input[type="range"] {
+  --range-thumb-size: 1.25rem;
+  --range-track-height: 0.5rem;
+  --value: 50;
+  --min: 0;
+  --max: 100;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: var(--range-track-height);
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+/* Track dinámico: izquierda morado, derecha blanco, sigue el thumb */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: var(--range-track-height);
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    #a78bfa 0%,
+    #a78bfa calc((var(--value) - var(--min)) / (var(--max) - var(--min)) * 100%),
+    #fff calc((var(--value) - var(--min)) / (var(--max) - var(--min)) * 100%),
+    #fff 100%
+  );
+}
+input[type="range"]::-moz-range-track {
+  height: var(--range-track-height);
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    #a78bfa 0%,
+    #a78bfa calc((var(--value) - var(--min)) / (var(--max) - var(--min)) * 100%),
+    #fff calc((var(--value) - var(--min)) / (var(--max) - var(--min)) * 100%),
+    #fff 100%
+  );
+}
+input[type="range"]::-ms-fill-lower {
+  background: #a78bfa;
+  border-radius: 9999px;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #fff;
+  border-radius: 9999px;
+}
+
+/* Thumb: círculo */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: var(--range-thumb-size);
+  height: var(--range-thumb-size);
+  background: #a78bfa;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 4px #a78bfa55;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: calc((var(--range-track-height) - var(--range-thumb-size)) / 2);
+}
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 2px solid #7c3aed;
+}
+input[type="range"]::-moz-range-thumb {
+  width: var(--range-thumb-size);
+  height: var(--range-thumb-size);
+  background: #a78bfa;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 4px #a78bfa55;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+input[type="range"]:focus::-moz-range-thumb {
+  outline: 2px solid #7c3aed;
+}
+input[type="range"]::-ms-thumb {
+  width: var(--range-thumb-size);
+  height: var(--range-thumb-size);
+  background: #a78bfa;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 4px #a78bfa55;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* Quitar fondo por defecto en Firefox */
+input[type="range"] {
+  background: transparent;
+}
+
+<input
+  id="price"
+  name="price"
+  type="range"
+  min="0"
+  max="100"
+  step="1"
+  class="flex-1"
+  style="--value:50; --min:0; --max:100"
+  oninput="this.style.setProperty('--value', this.value)"
+/>
