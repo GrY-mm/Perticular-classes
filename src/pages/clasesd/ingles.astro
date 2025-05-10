@@ -6,11 +6,17 @@ import Header from "../../components/header.astro";
 
 <script>
   let price = 0;
-  function updateBar(e) {
-    price = Number(e.target.value);
+  function updateBar(e: Event) {
+    price = Number((e.target as HTMLInputElement).value);
     const percent = ((price - 0) / 10) * 100;
-    document.getElementById('bar').style.width = percent + '%';
-    document.getElementById('priceValue').textContent = price;
+    const barElem = document.getElementById('bar');
+    if (barElem) {
+      barElem.style.width = percent + '%';
+    }
+    const priceValueElem = document.getElementById('priceValue');
+    if (priceValueElem) {
+      priceValueElem.textContent = String(price);
+    }
   }
 </script>
 
