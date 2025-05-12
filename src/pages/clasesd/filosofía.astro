@@ -20,49 +20,59 @@ import Header from "../../components/header.astro";
   }
 </script>
 
+<style>
+.z-top {
+  z-index: 9999;
+}
+</style>
+
 <Layout title="Filosofía">
+  <!-- Botón volver y barra de búsqueda siempre por encima del header -->
+  <div class="fixed top-6 left-6 z-top flex flex-col gap-4 w-[250px]">
+    <a href="/clases" class="bg-purple-100 border-2 border-purple-400 text-purple-700 font-bold px-4 py-2 rounded-xl shadow hover:bg-purple-200 transition-all flex items-center gap-2">
+      <span class="text-lg">←</span> Volver
+    </a>
+    <form class="bg-white/90 rounded-2xl shadow-xl border border-purple-200 p-4" onsubmit="return false;">
+      <label class="block mb-2 text-purple-700 font-bold" for="search">Buscar profesor</label>
+      <input
+        id="search"
+        name="search"
+        type="text"
+        placeholder="Buscar..."
+        class="w-full px-3 py-2 mb-4 border border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+      />
+
+      <label class="block mb-2 text-purple-700 font-bold" for="price">Precio máximo</label>
+      <div class="flex flex-col gap-2 mb-2">
+        <div class="mainBar w-full flex items-center gap-2">
+          <h1 id="priceValue" class="text-xs text-gray-500">0</h1>
+          <div id="progressBar" class="flex-1 h-3 bg-gray-200 rounded-full overflow-hidden relative">
+            <div id="bar" class="h-full bg-purple-400 transition-all absolute left-0 top-0" style="width: 0%"></div>
+            <input
+              id="price"
+              name="price"
+              type="range"
+              min="0"
+              max="10"
+              step="1"
+              class="w-full accent-purple-600 opacity-0 absolute left-0 top-0 h-3 cursor-pointer"
+              value="0"
+              oninput="const percent = ((this.value-0)/10)*100; document.getElementById('bar').style.width = percent + '%'; document.getElementById('priceValue').textContent = this.value;"
+              style="z-index:2"
+            />
+          </div>
+          <h1 class="text-xs text-gray-500">10</h1>
+        </div>
+      </div>
+    </form>
+  </div>
   <Header />
   <div class="fixed inset-0 -z-20 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
   <div class="fixed inset-0 -z-20 h-full w-full bg-white [background:radial-gradient(120%_120%_at_50%_10%,#fff_60%,#a78bfa_100%)] opacity-20"></div>
   
   <div class="flex gap-8 mt-4">
-    <!-- Barra lateral izquierda -->
-    <aside class="w-full max-w-xs bg-white/80 rounded-2xl shadow-xl border border-purple-200 p-6 h-fit sticky top-2 self-start">
-      <form>
-        <label class="block mb-2 text-purple-700 font-bold" for="search">Buscar profesor</label>
-        <input
-          id="search"
-          name="search"
-          type="text"
-          placeholder="Buscar..."
-          class="w-full px-4 py-2 mb-6 border border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
-        />
-
-        <label class="block mb-2 text-purple-700 font-bold" for="price">Precio máximo</label>
-        <div class="flex flex-col gap-2 mb-2">
-          <div class="mainBar w-full flex items-center gap-2">
-            <h1 id="priceValue" class="text-xs text-gray-500">0</h1>
-            <div id="progressBar" class="flex-1 h-3 bg-gray-200 rounded-full overflow-hidden relative">
-              <div id="bar" class="h-full bg-purple-400 transition-all absolute left-0 top-0" style="width: 0%"></div>
-              <input
-                id="price"
-                name="price"
-                type="range"
-                min="0"
-                max="10"
-                step="1"
-                class="w-full accent-purple-600 opacity-0 absolute left-0 top-0 h-3 cursor-pointer"
-                value="0"
-                oninput="const percent = ((this.value-0)/10)*100; document.getElementById('bar').style.width = percent + '%'; document.getElementById('priceValue').textContent = this.value;"
-                style="z-index:2"
-              />
-            </div>
-            <h1 class="text-xs text-gray-500">10</h1>
-          </div>
-        </div>
-      </form>
-    </aside>
-
+    <!-- Barra lateral izquierda (elimina la antigua barra de búsqueda aquí) -->
+    <aside class="w-full max-w-xs"></aside>
     <!-- Fichas de profesores -->
     <section class="flex-1 flex flex-col gap-8 mt-16 pr-8 pb-16">
       <!-- Perfil 1 -->
